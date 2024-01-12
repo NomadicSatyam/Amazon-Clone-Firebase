@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { auth } from "./firebase";
 import Payment from "./Payment";
 import Orders from "./Orders";
+import Footer from "./Footer";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
@@ -58,6 +59,7 @@ function App() {
     <Route exact path="/payment" element={<Elements stripe={promise}><Payment/></Elements>} />  
     
     </Routes>
+    <Footer/>
     </div>
     </Router>
     
